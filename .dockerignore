@@ -1,0 +1,13 @@
+venv
+__pycache__
+.git
+.gitignore
+chroma_db
+.streamlit
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+.env

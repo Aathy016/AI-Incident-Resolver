@@ -1,0 +1,12 @@
+Issue:
+Database connection timeout
+
+Possible Causes:
+1. Database server unavailable
+2. Connection pool exhausted
+3. Network latency
+
+Resolution:
+Restart service.
+Check database connectivity.
+Increase connection pool.

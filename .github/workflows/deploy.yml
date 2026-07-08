@@ -1,0 +1,37 @@
+name: AI Incident Resolver CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+
+    - name: Install Dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run Tests
+      run: |
+        python -m py_compile src/*.py
+
+    - name: Build Docker Image
+      run: |
+        docker build -t incident-ai .
+
+    - name: Success
+      run: echo "Pipeline Completed"
