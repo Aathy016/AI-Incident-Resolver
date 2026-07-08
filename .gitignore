@@ -51,3 +51,4 @@ kubeconfig
 # Temporary files
 temp/
 tmp/
+*.docx
